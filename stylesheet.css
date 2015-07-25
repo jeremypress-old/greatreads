@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+#title {
+	text-align: center;
+	color: #78644D;
+	font-family: "HelveticaNeue-Light";
+	font-weight: 100;
+	font-size: 60px;
+}
+.myreads {
+	height: 500px;
+	width: 350px;
+	border-radius: 10px;
+	background-color: green;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.myreads-item {
+	border-top: 1px solid white;
+	box-shadow: 0 1px 0 gray inset;  
+	width: 100%;
+}
+
+.myreads-item:first-child {
+	border: none;
+	box-shadow: none;
+	height: 30%;
+
+}
+
+.selected {
+	height: 30%;
+}
