@@ -1,5 +1,5 @@
 var USER_ID = "32376874";
-var DEV_KEY = "4jzSxoAEeuI6HcD0HSCgjA";
+var DEV_KEY = "DEV KEY HERE";
 var MAX_ITEMS = 10;
 
 var url = "http://www.goodreads.com/review/list/" + USER_ID + "?format=xml&key=" + DEV_KEY + "&sort=shelves&v=2"; 
