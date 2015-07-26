@@ -10,8 +10,8 @@
 	font-size: 60px;
 }
 .myreads {
-	height: 500px;
-	width: 350px;
+	height: 600px;
+	width: 400px;
 	border-radius: 10px;
 	background-color: green;
 	margin: 0 auto;
@@ -23,6 +23,10 @@
 	box-shadow: 0 1px 0 gray inset;  
 	width: 100%;
 	-webkit-transition: height .5s;
+	transition: height .5s;
+    OTransition: height .5s;
+    MozTransition: height .5s;
+    WebkitTransition: height .5s;
 }
 
 .myreads-item:first-child {
@@ -34,4 +38,22 @@
 
 .selected {
 	height: 30%;
+}
+
+.book-title {
+	margin: 0 0;
+	padding: 0 0;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	width: 300px;
+  	font-family: "HelveticaNeue-Light";
+}
+
+.author {
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	-webkit-transition: opacity .5s;
+	font-family:  "HelveticaNeue-Light";
 }
