@@ -13,7 +13,7 @@
 	height: 600px;
 	width: 400px;
 	border-radius: 10px;
-	background-color: green;
+	background-color: grey;
 	margin: 0 auto;
 	margin-top: 30px;
 }
@@ -22,11 +22,8 @@
 	border-top: 1px solid white;
 	box-shadow: 0 1px 0 gray inset;  
 	width: 100%;
-	-webkit-transition: height .5s;
-	transition: height .5s;
-    OTransition: height .5s;
-    MozTransition: height .5s;
-    WebkitTransition: height .5s;
+	vertical-align: middle;
+	-webkit-transition: height .3s;
 }
 
 .myreads-item:first-child {
@@ -41,27 +38,52 @@
 }
 
 .book-title {
-	margin: 0 0;
+	pointer-events: none;
+	margin: 0 0 0 10px;
 	padding: 0 0;
 	white-space: nowrap;
   	overflow: hidden;
-  	text-overflow: ellipsis;
   	width: 300px;
   	font-family: "HelveticaNeue-Light";
 }
 
 .author {
-	margin: 0;
-	padding: 0;
+	overflow: hidden;
+	pointer-events: none;
+	margin: 0 0 0 10px;
+	padding: 0 0;
 	opacity: 0;
-	-webkit-transition: opacity .4s;
+	display: none;
 	font-family:  "HelveticaNeue-Light";
 }
 
 .rating {
+	margin: 0 0 0 10px;
+	padding: 0 0;
+	pointer-events: none;
 	font-weight: 100;
 	font-size: 18px;
 	color: gold;
+	display: none;
 	opacity: 0;
-	-webkit-transition: opacity .4s;
+	overflow: hidden;
+}
+
+
+.cover {
+	overflow: hidden;
+	border-radius: 5px;
+	margin: 20px 5px 0 10px;
+	height: 0px;
+	width: 0px;
+	float: left;
+	pointer-events: none;
+	opacity: 0;
+	display: inline;
+}
+
+.info-container {
+	position: relative;
+ 	top: 50%;
+ 	-webkit-transform: translateY(-50%);
 }
