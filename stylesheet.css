@@ -54,6 +54,14 @@
 	margin: 0;
 	padding: 0;
 	opacity: 0;
-	-webkit-transition: opacity .5s;
+	-webkit-transition: opacity .4s;
 	font-family:  "HelveticaNeue-Light";
+}
+
+.rating {
+	font-weight: 100;
+	font-size: 18px;
+	color: gold;
+	opacity: 0;
+	-webkit-transition: opacity .4s;
 }

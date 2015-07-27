@@ -31,14 +31,23 @@ function parseXML(data) {
 
     //Building the myreads items.
     for (i = 0; i < titles.length; i++) {
-        console.log(i);
-        console.log(covers[i].innerHTML);
+        var numStars = Math.floor(rating[i].innerHTML);
+        var ratingsDiv = "<div class='rating'>";
+        for (j = 0; j < 5; j++) {
+            if (numStars > 0) {
+                ratingsDiv += "<span>&#9733;</span>"
+                numStars -= 1
+            } else {
+                ratingsDiv += "<span>&#9734;</span>"
+            }
+        }
+        ratingsDiv += "</div>"
         if ((shelves[i] === "read" || shelves[i] === "currently-reading") && numItems < MAX_ITEMS) {
             $(".myreads").append("<div class='myreads-item' id='item-" + numItems + "'>"
                 + "<img class='cover' src='#' />"
                 + "<p class='book-title'>" + titles[i].innerHTML  + " </p>"
                 + "<p class ='author'>" + authors[i].innerHTML  + "</p>"
-                + "<div class='rating'> </div>"
+                + ratingsDiv
                 + "<div class='read'> </div>"
                 + "</div>");
             numItems += 1;
@@ -49,8 +58,10 @@ function parseXML(data) {
 function setSelectedItem(itemNumber, isInit) {
     $(".myreads-item").css("height", (75/(numItems - 1)) + "%");
     $('.author').css("opacity", "0");
+    $('.rating').css("opacity", "0")
     $('#' + itemNumber).css("height", 25 + "%");
     $('#' +itemNumber + "> .author").css("opacity", "1");
+    $('#' +itemNumber + "> .rating").css("opacity", "1");
 }
 
 function myreadsItemClick(event) {
